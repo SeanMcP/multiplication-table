@@ -68,7 +68,7 @@ Object.entries(columns).forEach(([key, value]) => {
   selectors += selector;
 });
 
-fs.writeFileSync("selectors.css", selectors);
+fs.writeFileSync("selectors.css", "/** GENERATED FILE: DO NOT EDIT DIRECTLY */\n" + selectors);
 
 const gridSize = SIZE + 1;
 
@@ -76,4 +76,4 @@ const template = fs.readFileSync(".template.html", "utf8");
 const html = template
   .replace("<!-- INPUTS -->", inputs)
   .replace("/** GRID_STYLE */", `--grid-size: ${gridSize};`);
-fs.writeFileSync("index.html", html);
+fs.writeFileSync("index.html", "<!-- GENERATED FILE: DO NOT EDIT DIRECTLY -->\n" + html);
