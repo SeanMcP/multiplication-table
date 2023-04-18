@@ -38,9 +38,9 @@ for (let x = 0; x <= SIZE; x++) {
 let selectors = ``;
 const styles = `background-color: var(--complete, gold);`;
 
-const winner = `body${ids
+const winner = `body:is(.DEVMODE, ${ids
   .map((id) => `:has(input[name="${id}"]:valid)`)
-  .join("")}`;
+  .join("")})`;
 
 selectors += `${winner} {
     background-color: var(--winner);
@@ -48,7 +48,12 @@ selectors += `${winner} {
 
 ${winner} .confetti {
     --confetti-display: flex;
-}\n`;
+}
+
+${winner} .grid {
+  opacity: 0.5;
+}
+`;
 
 Object.entries(rows).forEach(([key, value]) => {
   let selector = `.grid`;
@@ -68,7 +73,10 @@ Object.entries(columns).forEach(([key, value]) => {
   selectors += selector;
 });
 
-fs.writeFileSync("selectors.css", "/** GENERATED FILE: DO NOT EDIT DIRECTLY */\n" + selectors);
+fs.writeFileSync(
+  "selectors.css",
+  "/** GENERATED FILE: DO NOT EDIT DIRECTLY */\n" + selectors
+);
 
 const gridSize = SIZE + 1;
 
@@ -76,4 +84,7 @@ const template = fs.readFileSync(".template.html", "utf8");
 const html = template
   .replace("<!-- INPUTS -->", inputs)
   .replace("/** GRID_STYLE */", `--grid-size: ${gridSize};`);
-fs.writeFileSync("index.html", "<!-- GENERATED FILE: DO NOT EDIT DIRECTLY -->\n" + html);
+fs.writeFileSync(
+  "index.html",
+  "<!-- GENERATED FILE: DO NOT EDIT DIRECTLY -->\n" + html
+);

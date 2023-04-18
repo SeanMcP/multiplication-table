@@ -55,11 +55,13 @@ input {
   background-size: cover;
   bottom: 0;
   display: var(--confetti-display, none);
-  font-size: 4em;
+  font-size: 5em;
   font-weight: 900;
   justify-content: center;
   left: 0;
+  letter-spacing: 0.125ch;
   position: absolute;
   right: 0;
+  text-align: center;
   top: 0;
 }
