@@ -1,0 +1,14 @@
+/** GENERATED FILE: DO NOT EDIT DIRECTLY */
+body:is(.DEVMODE, :has(input[name="1x1"]:valid)) {
+    background-color: var(--winner);
+}
+
+body:is(.DEVMODE, :has(input[name="1x1"]:valid)) .confetti {
+    --confetti-display: flex;
+}
+
+body:is(.DEVMODE, :has(input[name="1x1"]:valid)) .grid {
+  opacity: 0.5;
+}
+.grid:has(input[name="1x1"]:valid) [name^="1x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x1"]:valid) [name$="x1"] { background-color: var(--complete, gold); }

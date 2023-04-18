@@ -1,0 +1,16 @@
+/** GENERATED FILE: DO NOT EDIT DIRECTLY */
+body:is(.DEVMODE, :has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="2x1"]:valid):has(input[name="2x2"]:valid)) {
+    background-color: var(--winner);
+}
+
+body:is(.DEVMODE, :has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="2x1"]:valid):has(input[name="2x2"]:valid)) .confetti {
+    --confetti-display: flex;
+}
+
+body:is(.DEVMODE, :has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="2x1"]:valid):has(input[name="2x2"]:valid)) .grid {
+  opacity: 0.5;
+}
+.grid:has(input[name="1x1"]:valid):has(input[name="1x2"]:valid) [name^="1x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="2x1"]:valid):has(input[name="2x2"]:valid) [name^="2x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x1"]:valid):has(input[name="2x1"]:valid) [name$="x1"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x2"]:valid):has(input[name="2x2"]:valid) [name$="x2"] { background-color: var(--complete, gold); }

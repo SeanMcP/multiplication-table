@@ -1,0 +1,20 @@
+/** GENERATED FILE: DO NOT EDIT DIRECTLY */
+body:is(.DEVMODE, :has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="1x3"]:valid):has(input[name="1x4"]:valid):has(input[name="2x1"]:valid):has(input[name="2x2"]:valid):has(input[name="2x3"]:valid):has(input[name="2x4"]:valid):has(input[name="3x1"]:valid):has(input[name="3x2"]:valid):has(input[name="3x3"]:valid):has(input[name="3x4"]:valid):has(input[name="4x1"]:valid):has(input[name="4x2"]:valid):has(input[name="4x3"]:valid):has(input[name="4x4"]:valid)) {
+    background-color: var(--winner);
+}
+
+body:is(.DEVMODE, :has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="1x3"]:valid):has(input[name="1x4"]:valid):has(input[name="2x1"]:valid):has(input[name="2x2"]:valid):has(input[name="2x3"]:valid):has(input[name="2x4"]:valid):has(input[name="3x1"]:valid):has(input[name="3x2"]:valid):has(input[name="3x3"]:valid):has(input[name="3x4"]:valid):has(input[name="4x1"]:valid):has(input[name="4x2"]:valid):has(input[name="4x3"]:valid):has(input[name="4x4"]:valid)) .confetti {
+    --confetti-display: flex;
+}
+
+body:is(.DEVMODE, :has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="1x3"]:valid):has(input[name="1x4"]:valid):has(input[name="2x1"]:valid):has(input[name="2x2"]:valid):has(input[name="2x3"]:valid):has(input[name="2x4"]:valid):has(input[name="3x1"]:valid):has(input[name="3x2"]:valid):has(input[name="3x3"]:valid):has(input[name="3x4"]:valid):has(input[name="4x1"]:valid):has(input[name="4x2"]:valid):has(input[name="4x3"]:valid):has(input[name="4x4"]:valid)) .grid {
+  opacity: 0.5;
+}
+.grid:has(input[name="1x1"]:valid):has(input[name="1x2"]:valid):has(input[name="1x3"]:valid):has(input[name="1x4"]:valid) [name^="1x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="2x1"]:valid):has(input[name="2x2"]:valid):has(input[name="2x3"]:valid):has(input[name="2x4"]:valid) [name^="2x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="3x1"]:valid):has(input[name="3x2"]:valid):has(input[name="3x3"]:valid):has(input[name="3x4"]:valid) [name^="3x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="4x1"]:valid):has(input[name="4x2"]:valid):has(input[name="4x3"]:valid):has(input[name="4x4"]:valid) [name^="4x"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x1"]:valid):has(input[name="2x1"]:valid):has(input[name="3x1"]:valid):has(input[name="4x1"]:valid) [name$="x1"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x2"]:valid):has(input[name="2x2"]:valid):has(input[name="3x2"]:valid):has(input[name="4x2"]:valid) [name$="x2"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x3"]:valid):has(input[name="2x3"]:valid):has(input[name="3x3"]:valid):has(input[name="4x3"]:valid) [name$="x3"] { background-color: var(--complete, gold); }
+.grid:has(input[name="1x4"]:valid):has(input[name="2x4"]:valid):has(input[name="3x4"]:valid):has(input[name="4x4"]:valid) [name$="x4"] { background-color: var(--complete, gold); }
